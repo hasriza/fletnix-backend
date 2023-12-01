@@ -24,4 +24,4 @@ yarn run dev
 yarn start
 ```
 
-### Port will be listening to 3001 (http:localhost:3001)
+### Port will be listening to 3001 (http://localhost:3001)
