@@ -41,7 +41,7 @@ app.use(compression());
 // Specify allowed origins
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://fletnix-web.vercel.app/',
+  'https://fletnix-web.vercel.app',
   'https://fletnix-fnzroyo1d-hasriza.vercel.app',
 ];
 
@@ -67,6 +67,13 @@ passport.use('jwt', jwtStrategy);
 if (config.env === 'production') {
   app.use('/v1/auth', authLimiter);
 }
+
+// Test default path
+app.get('/', (req, res) => {
+  res.json({
+    message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄',
+  });
+});
 
 // v1 api routes
 app.use('/v1', routes);
