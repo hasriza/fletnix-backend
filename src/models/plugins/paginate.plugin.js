@@ -68,7 +68,7 @@ const paginate = (schema) => {
                     chars: ' ',
                   },
                 },
-                format: '%B %d, %Y',
+                // format: '%B %d, %Y',
               },
             },
           },
