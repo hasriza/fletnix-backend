@@ -27,7 +27,7 @@ const getContents = catchAsync(async (req, res) => {
   if (req.user.age < 18) filter.rating = { $ne: 'R' };
 
   const options = pick(req.body, ['sortBy', 'limit', 'page']);
-  const { results: showsList, totalPages } = await contentService.queryContents(filter, options);
+  const { results: showsList, totalPages } = await contentService.queryContents(filter, options, reqData.dateSort);
 
   res.send({ showsList, totalPages, status: httpStatus[200] });
 });

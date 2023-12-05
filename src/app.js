@@ -39,25 +39,24 @@ app.use(compression());
 
 // enable cors
 // Specify allowed origins
-// const allowedOrigins = [
-//   'http://localhost:3000',
-//   'https://fletnix-web.vercel.app',
-//   'https://fletnix-fnzroyo1d-hasriza.vercel.app',
-// ];
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://fletnix-web.vercel.app',
+  'https://fletnix-fnzroyo1d-hasriza.vercel.app',
+];
 
-// // Configure CORS with options
-// const corsOptions = {
-//   origin(origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-// };
+// Configure CORS with options
+const corsOptions = {
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
 
-// app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors(corsOptions));
 app.options('*', cors());
 
 // jwt authentication
