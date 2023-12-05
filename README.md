@@ -27,26 +27,26 @@ Open terminal and enter
 PORT=3001
 
 #URL of the Mongo DB
-MONGODB_URL=mongodb://127.0.0.1:27017/fletnix
+MONGODB_URL=
 
 #JWT secret key
-JWT_SECRET=fletnix@smart3
+JWT_SECRET=
 #Number of minutes after which an access token expires
-JWT_ACCESS_EXPIRATION_MINUTES=1440
+JWT_ACCESS_EXPIRATION_MINUTES=
 #Number of days after which a refresh token expires
-JWT_REFRESH_EXPIRATION_DAYS=30
+JWT_REFRESH_EXPIRATION_DAYS=
 #Number of minutes after which a reset password token expires
-JWT_RESET_PASSWORD_EXPIRATION_MINUTES=10
+JWT_RESET_PASSWORD_EXPIRATION_MINUTES=
 #Number of minutes after which a verify email token expires
-JWT_VERIFY_EMAIL_EXPIRATION_MINUTES=10
+JWT_VERIFY_EMAIL_EXPIRATION_MINUTES=
 
 #MTP configuration options for the email service //
 #or testing, you can use a fake SMTP service like Ethereal: https://ethereal.email/create
-SMTP_HOST=smtp.ethereal.email
-SMTP_PORT=587
-SMTP_USERNAME=newell28@ethereal.email
-SMTP_PASSWORD=VFyxXfsfmTVr8VVq8P
-EMAIL_FROM=support@traxpent.com
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USERNAME=
+SMTP_PASSWORD=
+EMAIL_FROM=
 ```
 
 - Use git to clone the project and run install:
