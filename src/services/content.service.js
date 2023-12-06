@@ -11,8 +11,8 @@ const ApiError = require('../utils/ApiError');
  * @param {number} [options.page] - Current page (default = 1)
  * @returns {Promise<QueryResult>}
  */
-const queryContents = async (filter, options, dateSort) => {
-  const contents = await Content.paginate(filter, options, 'title type duration release_year date_added', dateSort);
+const queryContents = async (filter, options, showFields, dateSort) => {
+  const contents = await Content.paginate(filter, options, showFields, dateSort);
   if (!contents) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Not found!');
   }

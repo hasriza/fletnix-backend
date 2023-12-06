@@ -12,9 +12,10 @@ const getContents = {
     searchVal: Joi.string().optional(),
     type: Joi.string().optional(),
     sortBy: Joi.string(),
-    limit: Joi.number().integer(),
-    page: Joi.number().integer(),
+    limit: Joi.number().integer().optional(),
+    page: Joi.number().integer().optional(),
     dateSort: Joi.number().integer().optional(),
+    showFields: Joi.string().optional(),
   }),
 };
 
