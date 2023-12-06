@@ -28,14 +28,14 @@ const getContents = catchAsync(async (req, res) => {
 
   const options = pick(req.body, ['sortBy', 'limit', 'page']);
 
-  const { results: showsList, totalPages } = await contentService.queryContents(
+  const { results: showsList, totalResults } = await contentService.queryContents(
     filter,
     options,
     reqData.showFields || 'title type duration release_year date_added',
     reqData.dateSort
   );
 
-  res.send({ showsList, totalPages, status: httpStatus[200] });
+  res.send({ showsList, totalResults, status: httpStatus[200] });
 });
 
 module.exports = {
