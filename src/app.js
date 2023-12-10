@@ -41,8 +41,13 @@ app.use(compression());
 // Specify allowed origins
 const allowedOrigins = [
   'http://localhost:3000',
+  'http://localhost:4200',
   'https://fletnix-web.vercel.app',
-  'https://fletnix-fnzroyo1d-hasriza.vercel.app',
+  'https://fletnix-web-hasriza.vercel.app',
+  'https://fletnix-web-git-main-hasriza.vercel.app',
+  'https://fletnix-angular-hasriza.vercel.app/',
+  'https://fletnix-angular.vercel.app/',
+  'https://fletnix-angular-git-main-hasriza.vercel.app/',
 ];
 
 // Configure CORS with options
