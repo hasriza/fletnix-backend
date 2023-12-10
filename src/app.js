@@ -45,9 +45,9 @@ const allowedOrigins = [
   'https://fletnix-web.vercel.app',
   'https://fletnix-web-hasriza.vercel.app',
   'https://fletnix-web-git-main-hasriza.vercel.app',
-  'https://fletnix-angular-hasriza.vercel.app/',
-  'https://fletnix-angular.vercel.app/',
-  'https://fletnix-angular-git-main-hasriza.vercel.app/',
+  'https://fletnix-angular.vercel.app',
+  'https://fletnix-angular-hasriza.vercel.app',
+  'https://fletnix-angular-git-main-hasriza.vercel.app',
 ];
 
 // Configure CORS with options
