@@ -31,7 +31,7 @@ const paginate = (schema) => {
     let docsPromise;
     let sortObj = {};
     let projectObj = {};
-    let addFieldsObj = {};
+    let addFieldsObj = { id: '$_id' };
     let matchObj = filter;
 
     if (options.sortBy) {
@@ -131,7 +131,7 @@ const paginate = (schema) => {
 
     if (Object.keys(projectObj).length) {
       aggregateArr.splice(3, 0, {
-        $project: { ...projectObj, ...projectLookup },
+        $project: { ...projectObj, ...projectLookup, id: 1, _id: 0 },
       });
     }
 

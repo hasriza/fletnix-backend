@@ -31,7 +31,7 @@ const getContents = catchAsync(async (req, res) => {
   const { results: showsList, totalResults } = await contentService.queryContents(
     filter,
     options,
-    reqData.showFields || 'title type duration release_year date_added',
+    reqData.showFields || 'id title type duration release_year date_added',
     reqData.dateSort
   );
 
